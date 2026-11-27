@@ -2,6 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
+import 'package:image_picker_android/image_picker_android.dart';
+import 'package:image_picker_platform_interface/image_picker_platform_interface.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -20,6 +22,8 @@ import 'data/cache/hive_catalogue_cache.dart';
 /// already available when the router runs its first redirect.
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  _useAndroidPhotoPicker();
 
   if (!Env.isConfigured) {
     AppLog.error('Missing build configuration: ${Env.missingDescription}');
@@ -89,6 +93,37 @@ Future<void> main() async {
       // client's dealers' data.
       ..sendDefaultPii = false;
   }, appRunner: () => runApp(const ProviderScope(child: MarutiWaterApp())));
+}
+
+/// Routes gallery picking through the Android Photo Picker.
+///
+/// image_picker_android defaults `useAndroidPhotoPicker` to false, so on
+/// Android 13, 14 and 15 it opens the old `ACTION_GET_CONTENT` document
+/// browser instead. Android 16 and above always use the Photo Picker, flag or
+/// not, so this only affects the versions in between — which is most phones in
+/// the field today.
+///
+/// It matters for three reasons:
+///
+///   * The Photo Picker shows photos only. `ACTION_GET_CONTENT` opens the
+///     files UI, where an owner adding a product photo is offered Downloads,
+///     Drive and every document on the phone.
+///   * It is a separate system app. The user's library is never exposed to
+///     this process; what comes back is one URI this app may read, which is
+///     why the manifest needs no media permission at all.
+///   * It is the picker Google expects. An app that reaches for
+///     READ_MEDIA_IMAGES instead has to justify itself in the Photo and Video
+///     Permissions declaration, and "the owner picks a product photo" is not
+///     a justification that survives review, because this is the API for it.
+///
+/// The type check is also the platform check: on iOS and web
+/// `ImagePickerPlatform.instance` is not an [ImagePickerAndroid] and this does
+/// nothing.
+void _useAndroidPhotoPicker() {
+  final ImagePickerPlatform picker = ImagePickerPlatform.instance;
+  if (picker is ImagePickerAndroid) {
+    picker.useAndroidPhotoPicker = true;
+  }
 }
 
 /// Shown when the app was built wrongly: missing dart-defines, or a Gradle

@@ -1,12 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Product photography is captured in-app or picked from the gallery.
-         READ_MEDIA_IMAGES covers Android 13+; READ_EXTERNAL_STORAGE covers
-         Android 12 and below, where the newer permission does not exist. -->
+    <!-- CAMERA is for the QR and barcode scanner, which draws a live preview
+         in-app; MediaStore's camera intent cannot do that.
+
+         No media-read permission is declared on purpose. Every image the app
+         takes in comes from ImagePicker().pickImage(source: gallery), which
+         hands the choice to the system picker and returns one content URI the
+         app is granted access to for that URI alone. The app never queries
+         MediaStore, never browses the gallery itself, and nothing requests
+         Permission.photos or Permission.storage at runtime, so
+         READ_MEDIA_IMAGES and READ_EXTERNAL_STORAGE would do nothing except
+         force a Photo and Video Permissions declaration in Play Console that
+         we cannot honestly justify. -->
     <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="@string/app_name"

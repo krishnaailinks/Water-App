@@ -98,7 +98,7 @@ abstract final class AppTheme {
     shape: const Border(bottom: BorderSide(color: AppColors.border)),
   );
 
-  static const CardTheme _cardTheme = CardTheme(
+  static const CardThemeData _cardTheme = CardThemeData(
     color: AppColors.surface,
     surfaceTintColor: Colors.transparent,
     elevation: 0,
@@ -208,7 +208,7 @@ abstract final class AppTheme {
         ),
       );
 
-  static DialogTheme _dialogTheme(TextTheme text) => DialogTheme(
+  static DialogThemeData _dialogTheme(TextTheme text) => DialogThemeData(
     backgroundColor: AppColors.surface,
     surfaceTintColor: Colors.transparent,
     elevation: 0,

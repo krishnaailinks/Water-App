@@ -1,5 +1,5 @@
+// ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -30,31 +30,36 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorGenericTitle => 'Something went wrong';
 
   @override
-  String get errorGenericBody => 'We could not complete that just now. Please try again.';
+  String get errorGenericBody =>
+      'We could not complete that just now. Please try again.';
 
   @override
   String get errorNetworkTitle => 'No internet connection';
 
   @override
-  String get errorNetworkBody => 'Check your mobile data or Wi-Fi, then try again.';
+  String get errorNetworkBody =>
+      'Check your mobile data or Wi-Fi, then try again.';
 
   @override
   String get errorServerTitle => 'Maruti Water is not responding';
 
   @override
-  String get errorServerBody => 'The service is temporarily unavailable. Please try again in a moment.';
+  String get errorServerBody =>
+      'The service is temporarily unavailable. Please try again in a moment.';
 
   @override
   String get errorRateLimitedTitle => 'Too many attempts';
 
   @override
-  String get errorRateLimitedBody => 'Please wait a few minutes before trying again.';
+  String get errorRateLimitedBody =>
+      'Please wait a few minutes before trying again.';
 
   @override
   String get errorSessionExpiredTitle => 'You have been signed out';
 
   @override
-  String get errorSessionExpiredBody => 'Your session expired. Please sign in again.';
+  String get errorSessionExpiredBody =>
+      'Your session expired. Please sign in again.';
 
   @override
   String validationRequired(String field) {
@@ -100,7 +105,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signupTitle => 'Create your account';
 
   @override
-  String get signupSubtitle => 'Maruti Water Solution reviews every new dealer before the account is activated.';
+  String get signupSubtitle =>
+      'Maruti Water Solution reviews every new dealer before the account is activated.';
 
   @override
   String get signupSubmit => 'Create account';
@@ -112,7 +118,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signupSignIn => 'Sign in';
 
   @override
-  String get signupEmailTaken => 'An account already exists for this email address.';
+  String get signupEmailTaken =>
+      'An account already exists for this email address.';
 
   @override
   String get signupAccountType => 'Account type';
@@ -172,7 +179,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pendingTitle => 'Waiting for approval';
 
   @override
-  String get pendingBody => 'Maruti Water Solution checks every new dealer account by hand. You will be able to sign in as soon as yours is approved.';
+  String get pendingBody =>
+      'Maruti Water Solution checks every new dealer account by hand. You will be able to sign in as soon as yours is approved.';
 
   @override
   String get pendingFirmLabel => 'Registered firm';
@@ -187,7 +195,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get rejectedTitle => 'Account not approved';
 
   @override
-  String get rejectedBody => 'Maruti Water Solution did not approve this account.';
+  String get rejectedBody =>
+      'Maruti Water Solution did not approve this account.';
 
   @override
   String get rejectedReasonLabel => 'Reason given';
@@ -199,25 +208,29 @@ class AppLocalizationsEn extends AppLocalizations {
   String get suspendedTitle => 'Account suspended';
 
   @override
-  String get suspendedBody => 'Access to this account has been paused by Maruti Water Solution. Get in touch to have it restored.';
+  String get suspendedBody =>
+      'Access to this account has been paused by Maruti Water Solution. Get in touch to have it restored.';
 
   @override
   String get contactWhatsApp => 'Contact us on WhatsApp';
 
   @override
-  String get contactUnavailable => 'WhatsApp could not be opened on this device.';
+  String get contactUnavailable =>
+      'WhatsApp could not be opened on this device.';
 
   @override
   String get signOutConfirmTitle => 'Sign out?';
 
   @override
-  String get signOutConfirmBody => 'You will need your email and password to sign in again.';
+  String get signOutConfirmBody =>
+      'You will need your email and password to sign in again.';
 
   @override
   String get emptyDefaultTitle => 'Nothing here yet';
 
   @override
-  String get emptyDefaultBody => 'Once there is something to show, it will appear here.';
+  String get emptyDefaultBody =>
+      'Once there is something to show, it will appear here.';
 
   @override
   String get actionShow => 'Show';
@@ -235,7 +248,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeSignedInTitle => 'You are signed in';
 
   @override
-  String get homeSignedInBody => 'Your account is approved. The catalogue arrives in the next release.';
+  String get homeSignedInBody =>
+      'Your account is approved. The catalogue arrives in the next release.';
 
   @override
   String get labelRole => 'Role';
@@ -427,13 +441,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get productsEmptyTitle => 'No products yet';
 
   @override
-  String get productsEmptyBody => 'Add your first product and the database will issue its permanent barcode.';
+  String get productsEmptyBody =>
+      'Add your first product and the database will issue its permanent barcode.';
 
   @override
   String get productsNoResultsTitle => 'Nothing matches that';
 
   @override
-  String get productsNoResultsBody => 'Try a different search term, or clear the filters to see the whole catalogue.';
+  String get productsNoResultsBody =>
+      'Try a different search term, or clear the filters to see the whole catalogue.';
 
   @override
   String get productsClearFilters => 'Clear filters';
@@ -507,7 +523,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get photosRemoveTitle => 'Remove photo?';
 
   @override
-  String get photosRemoveBody => 'This photo will not be saved with the product.';
+  String get photosRemoveBody =>
+      'This photo will not be saved with the product.';
 
   @override
   String photosLimitReached(int count) {
@@ -515,7 +532,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get photosUploadFailed => 'That photo could not be uploaded. Tap to try again.';
+  String get photosUploadFailed =>
+      'That photo could not be uploaded. Tap to try again.';
 
   @override
   String get photosReorderHint => 'Press and hold a photo to reorder.';
@@ -533,13 +551,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get permissionCameraTitle => 'Camera access is off';
 
   @override
-  String get permissionCameraBody => 'Maruti Water needs the camera to photograph a product. You can turn it on in Settings.';
+  String get permissionCameraBody =>
+      'Maruti Water needs the camera to photograph a product. You can turn it on in Settings.';
 
   @override
   String get permissionOpenSettings => 'Open settings';
 
   @override
-  String get permissionSettingsFailed => 'Settings could not be opened on this device.';
+  String get permissionSettingsFailed =>
+      'Settings could not be opened on this device.';
 
   @override
   String get fieldProductName => 'Product name';
@@ -584,22 +604,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get specValueHint => '7';
 
   @override
-  String get specEmpty => 'No specifications yet. Add rows such as Membrane or Body material.';
+  String get specEmpty =>
+      'No specifications yet. Add rows such as Membrane or Body material.';
 
   @override
   String get fieldInStockLabel => 'In stock';
 
   @override
-  String get fieldInStockHelp => 'Dealers see this product as available to order.';
+  String get fieldInStockHelp =>
+      'Dealers see this product as available to order.';
 
   @override
   String get fieldActiveLabel => 'Active';
 
   @override
-  String get fieldActiveHelp => 'Inactive products are hidden from every dealer catalogue.';
+  String get fieldActiveHelp =>
+      'Inactive products are hidden from every dealer catalogue.';
 
   @override
-  String get priceErrorRetailBelowWholesale => 'Retail price cannot be below the wholesale price';
+  String get priceErrorRetailBelowWholesale =>
+      'Retail price cannot be below the wholesale price';
 
   @override
   String get priceErrorNotPositive => 'Enter an amount greater than zero';
@@ -608,7 +632,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get priceWarningAboveMrp => 'This price is above the MRP you entered';
 
   @override
-  String get priceWarningZeroMargin => 'Retail equals wholesale, so the dealer earns nothing';
+  String get priceWarningZeroMargin =>
+      'Retail equals wholesale, so the dealer earns nothing';
 
   @override
   String marginChip(String amount, String percent) {
@@ -637,7 +662,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get createdTitle => 'Product created';
 
   @override
-  String get createdBody => 'This code is permanent and is now printed on every label for this product.';
+  String get createdBody =>
+      'This code is permanent and is now printed on every label for this product.';
 
   @override
   String get createdCodeLabel => 'Product code';
@@ -705,13 +731,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get labelsEmptyTitle => 'Choose products to label';
 
   @override
-  String get labelsEmptyBody => 'Pick one or more products and set how many labels each one needs.';
+  String get labelsEmptyBody =>
+      'Pick one or more products and set how many labels each one needs.';
 
   @override
   String get labelsNoProductsTitle => 'No products to label';
 
   @override
-  String get labelsNoProductsBody => 'Add a product first and it will appear here ready to print.';
+  String get labelsNoProductsBody =>
+      'Add a product first and it will appear here ready to print.';
 
   @override
   String labelsBarcodeTooFine(String width, String minimum) {
@@ -719,7 +747,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get labelsFilterNotice => 'Showing the products your catalogue filters currently match. Clear them on the Products tab to see everything.';
+  String get labelsFilterNotice =>
+      'Showing the products your catalogue filters currently match. Clear them on the Products tab to see everything.';
 
   @override
   String get labelsGenerateFailed => 'The label sheet could not be generated.';
@@ -743,13 +772,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dealersEmptyPendingTitle => 'No one is waiting';
 
   @override
-  String get dealersEmptyPendingBody => 'New dealer sign-ups will appear here for you to approve or turn down.';
+  String get dealersEmptyPendingBody =>
+      'New dealer sign-ups will appear here for you to approve or turn down.';
 
   @override
   String get dealersEmptyTitle => 'Nothing in this list';
 
   @override
-  String get dealersEmptyBody => 'Dealers you move into this state will be listed here.';
+  String get dealersEmptyBody =>
+      'Dealers you move into this state will be listed here.';
 
   @override
   String get dealerApprove => 'Approve';
@@ -777,13 +808,15 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get dealerRejectBody => 'They will see the reason you give here when they next open the app.';
+  String get dealerRejectBody =>
+      'They will see the reason you give here when they next open the app.';
 
   @override
   String get dealerRejectReason => 'Reason';
 
   @override
-  String get dealerRejectReasonHint => 'For example: firm details could not be verified';
+  String get dealerRejectReasonHint =>
+      'For example: firm details could not be verified';
 
   @override
   String dealerSuspendTitle(String name) {
@@ -791,7 +824,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get dealerSuspendBody => 'They lose catalogue access immediately, including on any device they are already signed in to.';
+  String get dealerSuspendBody =>
+      'They lose catalogue access immediately, including on any device they are already signed in to.';
 
   @override
   String dealerReactivateTitle(String name) {
@@ -799,7 +833,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get dealerReactivateBody => 'Catalogue access is restored at the role they held before.';
+  String get dealerReactivateBody =>
+      'Catalogue access is restored at the role they held before.';
 
   @override
   String dealerApproved(String name) {
@@ -851,7 +886,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String requestsSubtitle(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -869,7 +903,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get requestsEmptyTitle => 'Nothing waiting';
 
   @override
-  String get requestsEmptyBody => 'New dealer registrations will appear here for your decision.';
+  String get requestsEmptyBody =>
+      'New dealer registrations will appear here for your decision.';
 
   @override
   String requestsTimeAgo(String age) {
@@ -896,7 +931,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get approveSheetWarning => 'They picked this themselves. Check it is right before approving.';
+  String get approveSheetWarning =>
+      'They picked this themselves. Check it is right before approving.';
 
   @override
   String approveSheetConfirm(String role) {
@@ -909,7 +945,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get rejectSheetBody => 'Choose a reason. The dealer sees this, so keep it plain.';
+  String get rejectSheetBody =>
+      'Choose a reason. The dealer sees this, so keep it plain.';
 
   @override
   String get rejectReasonNotBusiness => 'Not a registered business';
@@ -963,13 +1000,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get directoryNoResultsTitle => 'No matches';
 
   @override
-  String get directoryNoResultsBody => 'Try a different firm name, phone number or city.';
+  String get directoryNoResultsBody =>
+      'Try a different firm name, phone number or city.';
 
   @override
   String directoryPendingBanner(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1021,7 +1058,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get dealerChangeRoleBody => 'This changes which price list they see from their next sign-in.';
+  String get dealerChangeRoleBody =>
+      'This changes which price list they see from their next sign-in.';
 
   @override
   String dealerRoleChanged(String firm, String role) {
@@ -1052,7 +1090,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String dashboardPendingCta(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1078,13 +1115,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dashboardTopScanned => 'Most scanned, last 30 days';
 
   @override
-  String get dashboardTopScannedEmpty => 'No scans recorded yet. Counts appear once dealers start scanning.';
+  String get dashboardTopScannedEmpty =>
+      'No scans recorded yet. Counts appear once dealers start scanning.';
 
   @override
   String dashboardScanCount(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1156,7 +1193,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String timeMinutes(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1173,7 +1209,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String timeHours(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1190,7 +1225,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String timeDays(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1225,7 +1259,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get moreExportCatalogue => 'Export catalogue (PDF)';
 
   @override
-  String get moreExportCatalogueHelp => 'Both price columns. Do not share with dealers.';
+  String get moreExportCatalogueHelp =>
+      'Both price columns. Do not share with dealers.';
 
   @override
   String get moreExportDealers => 'Export dealer list (CSV)';
@@ -1246,7 +1281,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get businessTitle => 'Business details';
 
   @override
-  String get businessIntro => 'These appear on every printed label and on the catalogue export. Changing them here updates the next thing you print.';
+  String get businessIntro =>
+      'These appear on every printed label and on the catalogue export. Changing them here updates the next thing you print.';
 
   @override
   String get businessNameLabel => 'Business name';
@@ -1294,7 +1330,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorRevokedTitle => 'Your account is no longer active';
 
   @override
-  String get errorRevokedBody => 'Maruti Water Solution has paused your access. Contact them to restore it.';
+  String get errorRevokedBody =>
+      'Maruti Water Solution has paused your access. Contact them to restore it.';
 
   @override
   String get navCatalogue => 'Catalogue';
@@ -1318,13 +1355,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get catalogueEmptyTitle => 'Nothing in the catalogue yet';
 
   @override
-  String get catalogueEmptyBody => 'Products added by Maruti Water Solution will appear here.';
+  String get catalogueEmptyBody =>
+      'Products added by Maruti Water Solution will appear here.';
 
   @override
   String get catalogueNoResultsTitle => 'No matching products';
 
   @override
-  String get catalogueNoResultsBody => 'Try a different name, model number or category.';
+  String get catalogueNoResultsBody =>
+      'Try a different name, model number or category.';
 
   @override
   String get labelWholesalePrice => 'Wholesale price';
@@ -1348,7 +1387,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String catalogueCountLabel(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1373,7 +1411,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get offlineExpiredTitle => 'Saved catalogue is out of date';
 
   @override
-  String get offlineExpiredBody => 'This catalogue is more than 7 days old, so prices may have changed. Connect to the internet to refresh it.';
+  String get offlineExpiredBody =>
+      'This catalogue is more than 7 days old, so prices may have changed. Connect to the internet to refresh it.';
 
   @override
   String get offlineRefreshing => 'Refreshing in the background';
@@ -1382,7 +1421,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get scanTitle => 'Scan a product';
 
   @override
-  String get scanHint => 'Point the camera at the barcode or QR code on the label';
+  String get scanHint =>
+      'Point the camera at the barcode or QR code on the label';
 
   @override
   String get scanTorchOn => 'Turn on the light';
@@ -1403,7 +1443,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get scanManualHint => 'MWS-DOM-001042-Z';
 
   @override
-  String get scanManualHelp => 'The code is printed under the barcode on the label.';
+  String get scanManualHelp =>
+      'The code is printed under the barcode on the label.';
 
   @override
   String get scanInvalidCode => 'Invalid code.';
@@ -1412,16 +1453,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get scanUnknownCode => 'That code is valid but no product matches it';
 
   @override
-  String get scanLookupFailed => 'Could not look that up. Check your connection.';
+  String get scanLookupFailed =>
+      'Could not look that up. Check your connection.';
 
   @override
   String get scanPermissionTitle => 'Camera access is needed to scan';
 
   @override
-  String get scanPermissionBody => 'Allow camera access so the app can read barcodes on your product labels.';
+  String get scanPermissionBody =>
+      'Allow camera access so the app can read barcodes on your product labels.';
 
   @override
-  String get scanPermissionDeniedBody => 'Camera access is turned off for this app. Turn it on in Settings to scan.';
+  String get scanPermissionDeniedBody =>
+      'Camera access is turned off for this app. Turn it on in Settings to scan.';
 
   @override
   String get scanCameraFailed => 'The camera could not be started';
@@ -1445,7 +1489,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String productWarranty(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1509,7 +1552,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get savedEmptyTitle => 'Nothing saved yet';
 
   @override
-  String get savedEmptyBody => 'Save a product from the catalogue and it will appear here, ready to quote.';
+  String get savedEmptyBody =>
+      'Save a product from the catalogue and it will appear here, ready to quote.';
 
   @override
   String get savedRemove => 'Remove';
@@ -1524,7 +1568,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String savedCount(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1566,7 +1609,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get accountClearCacheTitle => 'Clear the offline catalogue?';
 
   @override
-  String get accountClearCacheBody => 'The catalogue will be downloaded again next time you have signal. Your saved products are kept.';
+  String get accountClearCacheBody =>
+      'The catalogue will be downloaded again next time you have signal. Your saved products are kept.';
 
   @override
   String get accountCacheCleared => 'Offline catalogue cleared';
@@ -1581,7 +1625,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get savedNoResultsTitle => 'No matching saved products';
 
   @override
-  String get savedNoResultsBody => 'Try a different name, model number or code.';
+  String get savedNoResultsBody =>
+      'Try a different name, model number or code.';
 
   @override
   String get scanManualFieldLabel => 'Product code';
@@ -1590,7 +1635,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get complaintsTitle => 'Complaints & Support';
 
   @override
-  String get complaintsSubtitle => 'Track and submit issues or service requests';
+  String get complaintsSubtitle =>
+      'Track and submit issues or service requests';
 
   @override
   String get complaintNewButton => 'New Complaint';
@@ -1697,7 +1743,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get ownerComplaintsTitle => 'Complaint Management';
 
   @override
-  String get ownerComplaintsSubtitle => 'Manage dealer service tickets and responses';
+  String get ownerComplaintsSubtitle =>
+      'Manage dealer service tickets and responses';
 
   @override
   String get unitDetailsTitle => 'Product Unit Details';
@@ -1706,7 +1753,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get unitNotFoundTitle => 'Product Unit Not Found';
 
   @override
-  String get unitNotFoundBody => 'That unit serial code was not found in Maruti Water Solution database.';
+  String get unitNotFoundBody =>
+      'That unit serial code was not found in Maruti Water Solution database.';
 
   @override
   String get unitActionRaiseComplaint => 'Raise Service Complaint';
@@ -1757,13 +1805,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get warrantyLabelInvoiceNumber => 'Invoice Number';
 
   @override
-  String get warrantyUnactivatedHelp => 'Standard factory warranty applies. Warranty registration will be activated upon unit installation.';
+  String get warrantyUnactivatedHelp =>
+      'Standard factory warranty applies. Warranty registration will be activated upon unit installation.';
 
   @override
   String get manageBannersTitle => 'Manage Banners';
 
   @override
-  String get manageBannersSubtitle => 'Manage home dashboard promotional carousel banners';
+  String get manageBannersSubtitle =>
+      'Manage home dashboard promotional carousel banners';
 
   @override
   String get actionAddBanner => 'Add Banner';
@@ -1790,16 +1840,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get bannerDeleteConfirmTitle => 'Delete Banner?';
 
   @override
-  String get bannerDeleteConfirmBody => 'Are you sure you want to delete this banner? This action cannot be undone.';
+  String get bannerDeleteConfirmBody =>
+      'Are you sure you want to delete this banner? This action cannot be undone.';
 
   @override
-  String get bannerRecommendedHint => 'Recommended format: 16:7 aspect ratio wide banner image.';
+  String get bannerRecommendedHint =>
+      'Recommended format: 16:7 aspect ratio wide banner image.';
 
   @override
   String get bannerEmptyTitle => 'No Banners Added';
 
   @override
-  String get bannerEmptyBody => 'Tap Add Banner to upload promotional slider images for the user dashboard.';
+  String get bannerEmptyBody =>
+      'Tap Add Banner to upload promotional slider images for the user dashboard.';
 
   @override
   String get bannerUploadSuccess => 'Banner uploaded successfully';
@@ -1823,5 +1876,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get scanNoQrFound => 'No QR code found in this image.';
 
   @override
-  String get scanMultipleQrFound => 'Multiple QR codes found. Please select an image containing one QR code.';
+  String get scanMultipleQrFound =>
+      'Multiple QR codes found. Please select an image containing one QR code.';
 }

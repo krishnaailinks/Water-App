@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Adaptive icon foreground, API 26+. 108dp viewport; the launcher may mask
+    anything outside the centre 66dp, so the drop stays well inside it and
+    mipmap-anydpi-v26/ic_launcher.xml insets it a further 16%.
+
+    A vector rather than PNG densities on purpose: the root .gitignore ignores
+    *.png, so generated icon bitmaps could not be committed.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,26 C54,26 74,50 74,63 A20,20 0 0,1 34,63 C34,50 54,26 54,26 Z" />
+    <path
+        android:fillColor="#99D4E8FF"
+        android:pathData="M46,58 A8,8 0 1,0 46,74 A12,12 0 0,1 46,58 Z" />
+</vector>

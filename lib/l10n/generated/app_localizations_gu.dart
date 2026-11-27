@@ -1,5 +1,5 @@
+// ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -30,31 +30,36 @@ class AppLocalizationsGu extends AppLocalizations {
   String get errorGenericTitle => 'કંઈક ખોટું થયું';
 
   @override
-  String get errorGenericBody => 'અત્યારે આ પૂર્ણ થઈ શક્યું નથી. કૃપા કરી ફરી પ્રયાસ કરો.';
+  String get errorGenericBody =>
+      'અત્યારે આ પૂર્ણ થઈ શક્યું નથી. કૃપા કરી ફરી પ્રયાસ કરો.';
 
   @override
   String get errorNetworkTitle => 'ઇન્ટરનેટ કનેક્શન નથી';
 
   @override
-  String get errorNetworkBody => 'તમારો મોબાઇલ ડેટા અથવા વાઇ-ફાઇ તપાસો અને ફરી પ્રયાસ કરો.';
+  String get errorNetworkBody =>
+      'તમારો મોબાઇલ ડેટા અથવા વાઇ-ફાઇ તપાસો અને ફરી પ્રયાસ કરો.';
 
   @override
   String get errorServerTitle => 'મારુતિ વોટર જવાબ આપતું નથી';
 
   @override
-  String get errorServerBody => 'સેવા થોડા સમય માટે ઉપલબ્ધ નથી. કૃપા કરી થોડી વારે પ્રયાસ કરો.';
+  String get errorServerBody =>
+      'સેવા થોડા સમય માટે ઉપલબ્ધ નથી. કૃપા કરી થોડી વારે પ્રયાસ કરો.';
 
   @override
   String get errorRateLimitedTitle => 'ઘણા બધા પ્રયાસો';
 
   @override
-  String get errorRateLimitedBody => 'કૃપા કરી થોડી મિનિટ રાહ જોઈને ફરી પ્રયાસ કરો.';
+  String get errorRateLimitedBody =>
+      'કૃપા કરી થોડી મિનિટ રાહ જોઈને ફરી પ્રયાસ કરો.';
 
   @override
   String get errorSessionExpiredTitle => 'તમને સાઇન આઉટ કરવામાં આવ્યા છે';
 
   @override
-  String get errorSessionExpiredBody => 'તમારું સત્ર સમાપ્ત થયું છે. કૃપા કરી ફરી સાઇન ઇન કરો.';
+  String get errorSessionExpiredBody =>
+      'તમારું સત્ર સમાપ્ત થયું છે. કૃપા કરી ફરી સાઇન ઇન કરો.';
 
   @override
   String validationRequired(String field) {
@@ -100,7 +105,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get signupTitle => 'તમારું ખાતું બનાવો';
 
   @override
-  String get signupSubtitle => 'ખાતું ચાલુ થાય તે પહેલાં મારુતિ વોટર સોલ્યુશન દરેક નવા ડીલરની ચકાસણી કરે છે.';
+  String get signupSubtitle =>
+      'ખાતું ચાલુ થાય તે પહેલાં મારુતિ વોટર સોલ્યુશન દરેક નવા ડીલરની ચકાસણી કરે છે.';
 
   @override
   String get signupSubmit => 'ખાતું બનાવો';
@@ -172,7 +178,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get pendingTitle => 'મંજૂરીની રાહ જોવાઈ રહી છે';
 
   @override
-  String get pendingBody => 'મારુતિ વોટર સોલ્યુશન દરેક નવા ડીલર ખાતાની જાતે ચકાસણી કરે છે. તમારું ખાતું મંજૂર થતાં જ તમે સાઇન ઇન કરી શકશો.';
+  String get pendingBody =>
+      'મારુતિ વોટર સોલ્યુશન દરેક નવા ડીલર ખાતાની જાતે ચકાસણી કરે છે. તમારું ખાતું મંજૂર થતાં જ તમે સાઇન ઇન કરી શકશો.';
 
   @override
   String get pendingFirmLabel => 'નોંધાયેલી પેઢી';
@@ -199,7 +206,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get suspendedTitle => 'ખાતું સ્થગિત કરાયું છે';
 
   @override
-  String get suspendedBody => 'મારુતિ વોટર સોલ્યુશને આ ખાતાની પહોંચ થોભાવી છે. તેને ફરી ચાલુ કરાવવા સંપર્ક કરો.';
+  String get suspendedBody =>
+      'મારુતિ વોટર સોલ્યુશને આ ખાતાની પહોંચ થોભાવી છે. તેને ફરી ચાલુ કરાવવા સંપર્ક કરો.';
 
   @override
   String get contactWhatsApp => 'વોટ્સએપ પર સંપર્ક કરો';
@@ -211,7 +219,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get signOutConfirmTitle => 'સાઇન આઉટ કરવું છે?';
 
   @override
-  String get signOutConfirmBody => 'ફરી સાઇન ઇન કરવા માટે તમારે ઇમેઇલ અને પાસવર્ડની જરૂર પડશે.';
+  String get signOutConfirmBody =>
+      'ફરી સાઇન ઇન કરવા માટે તમારે ઇમેઇલ અને પાસવર્ડની જરૂર પડશે.';
 
   @override
   String get emptyDefaultTitle => 'અહીં હજી કંઈ નથી';
@@ -235,7 +244,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get homeSignedInTitle => 'તમે સાઇન ઇન છો';
 
   @override
-  String get homeSignedInBody => 'તમારું ખાતું મંજૂર થયું છે. કેટલોગ આગામી રિલીઝમાં આવશે.';
+  String get homeSignedInBody =>
+      'તમારું ખાતું મંજૂર થયું છે. કેટલોગ આગામી રિલીઝમાં આવશે.';
 
   @override
   String get labelRole => 'ભૂમિકા';
@@ -427,13 +437,15 @@ class AppLocalizationsGu extends AppLocalizations {
   String get productsEmptyTitle => 'હજી કોઈ ઉત્પાદન નથી';
 
   @override
-  String get productsEmptyBody => 'તમારું પહેલું ઉત્પાદન ઉમેરો, ડેટાબેઝ તેનો કાયમી બારકોડ આપશે.';
+  String get productsEmptyBody =>
+      'તમારું પહેલું ઉત્પાદન ઉમેરો, ડેટાબેઝ તેનો કાયમી બારકોડ આપશે.';
 
   @override
   String get productsNoResultsTitle => 'એવું કંઈ મળ્યું નથી';
 
   @override
-  String get productsNoResultsBody => 'બીજો શબ્દ શોધો, અથવા આખું કેટલોગ જોવા ફિલ્ટર સાફ કરો.';
+  String get productsNoResultsBody =>
+      'બીજો શબ્દ શોધો, અથવા આખું કેટલોગ જોવા ફિલ્ટર સાફ કરો.';
 
   @override
   String get productsClearFilters => 'ફિલ્ટર સાફ કરો';
@@ -515,7 +527,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get photosUploadFailed => 'આ ફોટો અપલોડ થઈ શક્યો નથી. ફરી પ્રયાસ કરવા ટૅપ કરો.';
+  String get photosUploadFailed =>
+      'આ ફોટો અપલોડ થઈ શક્યો નથી. ફરી પ્રયાસ કરવા ટૅપ કરો.';
 
   @override
   String get photosReorderHint => 'ક્રમ બદલવા ફોટો દબાવી રાખો.';
@@ -533,7 +546,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get permissionCameraTitle => 'કૅમેરાની પરવાનગી બંધ છે';
 
   @override
-  String get permissionCameraBody => 'ઉત્પાદનનો ફોટો પાડવા મારુતિ વોટરને કૅમેરાની જરૂર છે. તમે સેટિંગ્સમાં તે ચાલુ કરી શકો છો.';
+  String get permissionCameraBody =>
+      'ઉત્પાદનનો ફોટો પાડવા મારુતિ વોટરને કૅમેરાની જરૂર છે. તમે સેટિંગ્સમાં તે ચાલુ કરી શકો છો.';
 
   @override
   String get permissionOpenSettings => 'સેટિંગ્સ ખોલો';
@@ -584,7 +598,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get specValueHint => '7';
 
   @override
-  String get specEmpty => 'હજી કોઈ વિશિષ્ટતા નથી. મેમ્બ્રેન કે બોડી મટીરિયલ જેવી પંક્તિઓ ઉમેરો.';
+  String get specEmpty =>
+      'હજી કોઈ વિશિષ્ટતા નથી. મેમ્બ્રેન કે બોડી મટીરિયલ જેવી પંક્તિઓ ઉમેરો.';
 
   @override
   String get fieldInStockLabel => 'સ્ટોકમાં';
@@ -596,10 +611,12 @@ class AppLocalizationsGu extends AppLocalizations {
   String get fieldActiveLabel => 'સક્રિય';
 
   @override
-  String get fieldActiveHelp => 'નિષ્ક્રિય ઉત્પાદનો દરેક ડીલર કેટલોગમાંથી છુપાયેલા રહે છે.';
+  String get fieldActiveHelp =>
+      'નિષ્ક્રિય ઉત્પાદનો દરેક ડીલર કેટલોગમાંથી છુપાયેલા રહે છે.';
 
   @override
-  String get priceErrorRetailBelowWholesale => 'છૂટક ભાવ જથ્થાબંધ ભાવ કરતાં ઓછો ન હોઈ શકે';
+  String get priceErrorRetailBelowWholesale =>
+      'છૂટક ભાવ જથ્થાબંધ ભાવ કરતાં ઓછો ન હોઈ શકે';
 
   @override
   String get priceErrorNotPositive => 'શૂન્યથી વધુ રકમ દાખલ કરો';
@@ -608,7 +625,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get priceWarningAboveMrp => 'આ ભાવ તમે દાખલ કરેલા MRP કરતાં વધારે છે';
 
   @override
-  String get priceWarningZeroMargin => 'છૂટક ભાવ જથ્થાબંધ જેટલો જ છે, ડીલરને કંઈ મળશે નહીં';
+  String get priceWarningZeroMargin =>
+      'છૂટક ભાવ જથ્થાબંધ જેટલો જ છે, ડીલરને કંઈ મળશે નહીં';
 
   @override
   String marginChip(String amount, String percent) {
@@ -637,7 +655,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get createdTitle => 'ઉત્પાદન બન્યું';
 
   @override
-  String get createdBody => 'આ કોડ કાયમી છે અને હવે આ ઉત્પાદનના દરેક લેબલ પર છપાય છે.';
+  String get createdBody =>
+      'આ કોડ કાયમી છે અને હવે આ ઉત્પાદનના દરેક લેબલ પર છપાય છે.';
 
   @override
   String get createdCodeLabel => 'ઉત્પાદન કોડ';
@@ -705,13 +724,15 @@ class AppLocalizationsGu extends AppLocalizations {
   String get labelsEmptyTitle => 'લેબલ માટે ઉત્પાદનો પસંદ કરો';
 
   @override
-  String get labelsEmptyBody => 'એક કે વધુ ઉત્પાદન પસંદ કરો અને દરેકને કેટલા લેબલ જોઈએ તે નક્કી કરો.';
+  String get labelsEmptyBody =>
+      'એક કે વધુ ઉત્પાદન પસંદ કરો અને દરેકને કેટલા લેબલ જોઈએ તે નક્કી કરો.';
 
   @override
   String get labelsNoProductsTitle => 'લેબલ માટે કોઈ ઉત્પાદન નથી';
 
   @override
-  String get labelsNoProductsBody => 'પહેલાં ઉત્પાદન ઉમેરો, તે અહીં પ્રિન્ટ માટે તૈયાર દેખાશે.';
+  String get labelsNoProductsBody =>
+      'પહેલાં ઉત્પાદન ઉમેરો, તે અહીં પ્રિન્ટ માટે તૈયાર દેખાશે.';
 
   @override
   String labelsBarcodeTooFine(String width, String minimum) {
@@ -719,7 +740,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get labelsFilterNotice => 'તમારા કેટલોગ ફિલ્ટર સાથે મેળ ખાતી પ્રોડક્ટ બતાવાય છે. બધું જોવા માટે પ્રોડક્ટ ટેબ પર ફિલ્ટર સાફ કરો.';
+  String get labelsFilterNotice =>
+      'તમારા કેટલોગ ફિલ્ટર સાથે મેળ ખાતી પ્રોડક્ટ બતાવાય છે. બધું જોવા માટે પ્રોડક્ટ ટેબ પર ફિલ્ટર સાફ કરો.';
 
   @override
   String get labelsGenerateFailed => 'લેબલ શીટ બની શકી નથી.';
@@ -743,13 +765,15 @@ class AppLocalizationsGu extends AppLocalizations {
   String get dealersEmptyPendingTitle => 'કોઈ રાહ જોતું નથી';
 
   @override
-  String get dealersEmptyPendingBody => 'નવા ડીલર નોંધણી અહીં દેખાશે, જ્યાં તમે મંજૂર કે નામંજૂર કરી શકશો.';
+  String get dealersEmptyPendingBody =>
+      'નવા ડીલર નોંધણી અહીં દેખાશે, જ્યાં તમે મંજૂર કે નામંજૂર કરી શકશો.';
 
   @override
   String get dealersEmptyTitle => 'આ યાદીમાં કંઈ નથી';
 
   @override
-  String get dealersEmptyBody => 'તમે જે ડીલરોને આ સ્થિતિમાં મૂકશો તે અહીં દેખાશે.';
+  String get dealersEmptyBody =>
+      'તમે જે ડીલરોને આ સ્થિતિમાં મૂકશો તે અહીં દેખાશે.';
 
   @override
   String get dealerApprove => 'મંજૂર કરો';
@@ -777,7 +801,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get dealerRejectBody => 'તેઓ આગલી વખતે એપ ખોલશે ત્યારે તમે આપેલું કારણ જોશે.';
+  String get dealerRejectBody =>
+      'તેઓ આગલી વખતે એપ ખોલશે ત્યારે તમે આપેલું કારણ જોશે.';
 
   @override
   String get dealerRejectReason => 'કારણ';
@@ -791,7 +816,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get dealerSuspendBody => 'તેમની કેટલોગ પહોંચ તરત બંધ થશે, પહેલેથી સાઇન ઇન કરેલા ઉપકરણ પર પણ.';
+  String get dealerSuspendBody =>
+      'તેમની કેટલોગ પહોંચ તરત બંધ થશે, પહેલેથી સાઇન ઇન કરેલા ઉપકરણ પર પણ.';
 
   @override
   String dealerReactivateTitle(String name) {
@@ -799,7 +825,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get dealerReactivateBody => 'તેમની પહેલાંની ભૂમિકા સાથે કેટલોગ પહોંચ પાછી મળશે.';
+  String get dealerReactivateBody =>
+      'તેમની પહેલાંની ભૂમિકા સાથે કેટલોગ પહોંચ પાછી મળશે.';
 
   @override
   String dealerApproved(String name) {
@@ -851,7 +878,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String requestsSubtitle(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -869,7 +895,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get requestsEmptyTitle => 'કંઈ બાકી નથી';
 
   @override
-  String get requestsEmptyBody => 'નવી ડીલર નોંધણી તમારા નિર્ણય માટે અહીં દેખાશે.';
+  String get requestsEmptyBody =>
+      'નવી ડીલર નોંધણી તમારા નિર્ણય માટે અહીં દેખાશે.';
 
   @override
   String requestsTimeAgo(String age) {
@@ -896,7 +923,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get approveSheetWarning => 'આ તેમણે જાતે પસંદ કર્યું છે. મંજૂરી પહેલાં ચકાસો કે તે યોગ્ય છે.';
+  String get approveSheetWarning =>
+      'આ તેમણે જાતે પસંદ કર્યું છે. મંજૂરી પહેલાં ચકાસો કે તે યોગ્ય છે.';
 
   @override
   String approveSheetConfirm(String role) {
@@ -963,13 +991,13 @@ class AppLocalizationsGu extends AppLocalizations {
   String get directoryNoResultsTitle => 'કોઈ મેળ નથી';
 
   @override
-  String get directoryNoResultsBody => 'બીજું પેઢીનું નામ, ફોન નંબર કે શહેર અજમાવો.';
+  String get directoryNoResultsBody =>
+      'બીજું પેઢીનું નામ, ફોન નંબર કે શહેર અજમાવો.';
 
   @override
   String directoryPendingBanner(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1021,7 +1049,8 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
-  String get dealerChangeRoleBody => 'આનાથી તેમના આગલા સાઇન-ઇનથી કયો ભાવ દેખાશે તે બદલાશે.';
+  String get dealerChangeRoleBody =>
+      'આનાથી તેમના આગલા સાઇન-ઇનથી કયો ભાવ દેખાશે તે બદલાશે.';
 
   @override
   String dealerRoleChanged(String firm, String role) {
@@ -1052,7 +1081,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String dashboardPendingCta(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1078,13 +1106,13 @@ class AppLocalizationsGu extends AppLocalizations {
   String get dashboardTopScanned => 'છેલ્લા 30 દિવસમાં સૅથી વધુ સ્કેન';
 
   @override
-  String get dashboardTopScannedEmpty => 'હજી કોઈ સ્કેન નોંધાયું નથી. ડીલર સ્કેન કરવાનું શરૂ કરે એટલે ગણતરી દેખાશે.';
+  String get dashboardTopScannedEmpty =>
+      'હજી કોઈ સ્કેન નોંધાયું નથી. ડીલર સ્કેન કરવાનું શરૂ કરે એટલે ગણતરી દેખાશે.';
 
   @override
   String dashboardScanCount(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1156,7 +1184,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String timeMinutes(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1173,7 +1200,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String timeHours(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1190,7 +1216,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String timeDays(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1246,7 +1271,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get businessTitle => 'વ્યવસાયની વિગતો';
 
   @override
-  String get businessIntro => 'આ દરેક છપાયેલા લેબલ અને કેટલોગ નિકાસ પર દેખાય છે. અહીં બદલવાથી તમે આગળ જે છાપશો તે અપડેટ થશે.';
+  String get businessIntro =>
+      'આ દરેક છપાયેલા લેબલ અને કેટલોગ નિકાસ પર દેખાય છે. અહીં બદલવાથી તમે આગળ જે છાપશો તે અપડેટ થશે.';
 
   @override
   String get businessNameLabel => 'વ્યવસાયનું નામ';
@@ -1294,7 +1320,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get errorRevokedTitle => 'તમારું ખાતું હવે સક્રિય નથી';
 
   @override
-  String get errorRevokedBody => 'મારુતિ વોટર સોલ્યુશને તમારો પ્રવેશ થોભાવ્યો છે. પુનઃ ચાલુ કરવા તેમનો સંપર્ક કરો.';
+  String get errorRevokedBody =>
+      'મારુતિ વોટર સોલ્યુશને તમારો પ્રવેશ થોભાવ્યો છે. પુનઃ ચાલુ કરવા તેમનો સંપર્ક કરો.';
 
   @override
   String get navCatalogue => 'કેટલોગ';
@@ -1318,13 +1345,15 @@ class AppLocalizationsGu extends AppLocalizations {
   String get catalogueEmptyTitle => 'કેટલોગમાં હજી કંઈ નથી';
 
   @override
-  String get catalogueEmptyBody => 'મારુતિ વોટર સોલ્યુશન ઉમેરે તે પ્રોડક્ટ અહીં દેખાશે.';
+  String get catalogueEmptyBody =>
+      'મારુતિ વોટર સોલ્યુશન ઉમેરે તે પ્રોડક્ટ અહીં દેખાશે.';
 
   @override
   String get catalogueNoResultsTitle => 'કોઈ મેળ ખાતી પ્રોડક્ટ નથી';
 
   @override
-  String get catalogueNoResultsBody => 'બીજું નામ, મોડેલ નંબર કે શ્રેણી અજમાવો.';
+  String get catalogueNoResultsBody =>
+      'બીજું નામ, મોડેલ નંબર કે શ્રેણી અજમાવો.';
 
   @override
   String get labelWholesalePrice => 'જથ્થાબંધ ભાવ';
@@ -1348,7 +1377,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String catalogueCountLabel(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1373,7 +1401,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get offlineExpiredTitle => 'સાચવેલ કેટલોગ જૂનો છે';
 
   @override
-  String get offlineExpiredBody => 'આ કેટલોગ 7 દિવસથી જૂનો છે, તેથી ભાવ બદલાયા હોઈ શકે. તાજું કરવા ઇન્ટરનેટ સાથે જોડાઓ.';
+  String get offlineExpiredBody =>
+      'આ કેટલોગ 7 દિવસથી જૂનો છે, તેથી ભાવ બદલાયા હોઈ શકે. તાજું કરવા ઇન્ટરનેટ સાથે જોડાઓ.';
 
   @override
   String get offlineRefreshing => 'પૃષ્ઠભૂમિમાં તાજું થાય છે';
@@ -1409,7 +1438,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get scanInvalidCode => 'અમાન્ય કોડ.';
 
   @override
-  String get scanUnknownCode => 'કોડ સાચો છે પણ તેની સાથે કોઈ પ્રોડક્ટ મળતી નથી';
+  String get scanUnknownCode =>
+      'કોડ સાચો છે પણ તેની સાથે કોઈ પ્રોડક્ટ મળતી નથી';
 
   @override
   String get scanLookupFailed => 'શોધી શકાયું નહિં. તમારું જોડાણ તપાસો.';
@@ -1418,10 +1448,12 @@ class AppLocalizationsGu extends AppLocalizations {
   String get scanPermissionTitle => 'સ્કેન કરવા કેમેરાની પરવાનગી જોઈએ';
 
   @override
-  String get scanPermissionBody => 'એપ લેબલ પરના બારકોડ વાંચી શકે તે માટે કેમેરાની પરવાનગી આપો.';
+  String get scanPermissionBody =>
+      'એપ લેબલ પરના બારકોડ વાંચી શકે તે માટે કેમેરાની પરવાનગી આપો.';
 
   @override
-  String get scanPermissionDeniedBody => 'આ એપ માટે કેમેરા બંધ છે. સ્કેન કરવા સેટિંગ્સમાં ચાલુ કરો.';
+  String get scanPermissionDeniedBody =>
+      'આ એપ માટે કેમેરા બંધ છે. સ્કેન કરવા સેટિંગ્સમાં ચાલુ કરો.';
 
   @override
   String get scanCameraFailed => 'કેમેરા શરૂ થઈ શક્યો નહિં';
@@ -1445,7 +1477,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String productWarranty(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1509,7 +1540,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get savedEmptyTitle => 'હજી કંઈ સાચવ્યું નથી';
 
   @override
-  String get savedEmptyBody => 'કેટલોગમાંથી પ્રોડક્ટ સાચવો, તે અહીં ભાવપત્રક માટે તૈયાર દેખાશે.';
+  String get savedEmptyBody =>
+      'કેટલોગમાંથી પ્રોડક્ટ સાચવો, તે અહીં ભાવપત્રક માટે તૈયાર દેખાશે.';
 
   @override
   String get savedRemove => 'દૂર કરો';
@@ -1524,7 +1556,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String savedCount(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -1566,7 +1597,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get accountClearCacheTitle => 'ઓફલાઇન કેટલોગ સાફ કરવો?';
 
   @override
-  String get accountClearCacheBody => 'આગલી વખતે સિગ્નલ મળે ત્યારે કેટલોગ ફરી ડાઉનલોડ થશે. તમારી સાચવેલ પ્રોડક્ટ રહેશે.';
+  String get accountClearCacheBody =>
+      'આગલી વખતે સિગ્નલ મળે ત્યારે કેટલોગ ફરી ડાઉનલોડ થશે. તમારી સાચવેલ પ્રોડક્ટ રહેશે.';
 
   @override
   String get accountCacheCleared => 'ઓફલાઇન કેટલોગ સાફ કર્યો';
@@ -1590,7 +1622,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get complaintsTitle => 'Complaints & Support';
 
   @override
-  String get complaintsSubtitle => 'Track and submit issues or service requests';
+  String get complaintsSubtitle =>
+      'Track and submit issues or service requests';
 
   @override
   String get complaintNewButton => 'New Complaint';
@@ -1697,7 +1730,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get ownerComplaintsTitle => 'Complaint Management';
 
   @override
-  String get ownerComplaintsSubtitle => 'Manage dealer service tickets and responses';
+  String get ownerComplaintsSubtitle =>
+      'Manage dealer service tickets and responses';
 
   @override
   String get unitDetailsTitle => 'પ્રોડક્ટ યુનિટ વિગત';
@@ -1706,7 +1740,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get unitNotFoundTitle => 'પ્રોડક્ટ યુનિટ મળ્યું નથી';
 
   @override
-  String get unitNotFoundBody => 'આ યુનિટ સીરિયલ કોડ મારુતિ વોટર સોલ્યુશન ડેટાબેઝમાં મળ્યો નથી.';
+  String get unitNotFoundBody =>
+      'આ યુનિટ સીરિયલ કોડ મારુતિ વોટર સોલ્યુશન ડેટાબેઝમાં મળ્યો નથી.';
 
   @override
   String get unitActionRaiseComplaint => 'સર્વિસ ફરિયાદ કરો';
@@ -1757,7 +1792,8 @@ class AppLocalizationsGu extends AppLocalizations {
   String get warrantyLabelInvoiceNumber => 'ઇન્વોઇસ નંબર';
 
   @override
-  String get warrantyUnactivatedHelp => 'માનક ફેક્ટરી વોરંટી લાગુ થાય છે. ઇન્સ્ટોલેશન વખતે વોરંટી સક્રિય થશે.';
+  String get warrantyUnactivatedHelp =>
+      'માનક ફેક્ટરી વોરંટી લાગુ થાય છે. ઇન્સ્ટોલેશન વખતે વોરંટી સક્રિય થશે.';
 
   @override
   String get manageBannersTitle => 'બેનર મેનેજ કરો';
@@ -1790,16 +1826,19 @@ class AppLocalizationsGu extends AppLocalizations {
   String get bannerDeleteConfirmTitle => 'બેનર કાઢી નાખવું છે?';
 
   @override
-  String get bannerDeleteConfirmBody => 'શું તમે ખરેખર આ બેનર કાઢી નાખવા માંગો છો?';
+  String get bannerDeleteConfirmBody =>
+      'શું તમે ખરેખર આ બેનર કાઢી નાખવા માંગો છો?';
 
   @override
-  String get bannerRecommendedHint => 'ભલામણ કરેલ ફોર્મેટ: 16:7 આસ્પેક્ટ રેશિયો પોહળું બેનર.';
+  String get bannerRecommendedHint =>
+      'ભલામણ કરેલ ફોર્મેટ: 16:7 આસ્પેક્ટ રેશિયો પોહળું બેનર.';
 
   @override
   String get bannerEmptyTitle => 'કોઈ બેનર ઉમેરેલ નથી';
 
   @override
-  String get bannerEmptyBody => 'યુઝર ડેશબોર્ડ સ્લાઇડર માટે બેનર ઉમેરવા બેનર ઉમેરો પર ટેપ કરો.';
+  String get bannerEmptyBody =>
+      'યુઝર ડેશબોર્ડ સ્લાઇડર માટે બેનર ઉમેરવા બેનર ઉમેરો પર ટેપ કરો.';
 
   @override
   String get bannerUploadSuccess => 'બેનર સફળતાપૂર્વક અપલોડ થયું';
@@ -1823,5 +1862,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String get scanNoQrFound => 'આ ઇમેજમાં કોઈ QR કોડ મળ્યો નથી.';
 
   @override
-  String get scanMultipleQrFound => 'એક કરતાં વધુ QR કોડ મળ્યા. કૃપા કરીને એક QR કોડ ધરાવતી ઇમેજ પસંદ કરો.';
+  String get scanMultipleQrFound =>
+      'એક કરતાં વધુ QR કોડ મળ્યા. કૃપા કરીને એક QR કોડ ધરાવતી ઇમેજ પસંદ કરો.';
 }

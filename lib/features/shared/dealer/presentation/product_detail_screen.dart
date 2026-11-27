@@ -469,12 +469,16 @@ class _ActionBar extends ConsumerWidget {
 
     try {
       if (photo == null) {
-        await Share.share(message, subject: product.name);
+        await SharePlus.instance.share(
+          ShareParams(text: message, subject: product.name),
+        );
       } else {
-        await Share.shareXFiles(
-          <XFile>[photo],
-          text: message,
-          subject: product.name,
+        await SharePlus.instance.share(
+          ShareParams(
+            files: <XFile>[photo],
+            text: message,
+            subject: product.name,
+          ),
         );
       }
     } on Object catch (error, stackTrace) {

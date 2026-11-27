@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    windowSplashScreenAnimatedIcon for API 31+. The platform draws it centred
+    over windowSplashScreenBackground and masks it to a circle, so the mark
+    stays inside the inner two thirds of the canvas.
+-->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/splash_logo"
+    android:inset="20%" />

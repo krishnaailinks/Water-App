@@ -10,18 +10,24 @@
 -- Open the Supabase SQL editor for your project and run this entire script
 -- in one shot. It replaces the need to run individual migration files.
 --
--- After running on a FRESH database you must also:
---   1. Call promote_owner('<your-email>') from the SQL editor to bootstrap the
---      owner account.
+-- After running on a FRESH database you must also bootstrap the owner account.
+-- Earlier revisions of this comment told you to call promote_owner(), which
+-- does not exist anywhere in this repository. Sign up through the app, then:
+--
+--   update public.profiles p
+--      set role = 'owner', status = 'approved', approved_at = now()
+--     from auth.users u
+--    where u.id = p.id and u.email = '<your-email>';
 --
 -- SECTIONS
 -- --------
 --  §1  Extensions
 --  §2  Domain enums
 --  §3  Sequences
---  §4  Auth helper functions  (is_owner, is_approved, auth_role, auth_status)
 --  §5  Core tables            (profiles, products, product_qr_labels, product_images, scan_events,
 --                              audit_log, business_settings, dashboard_banners)
+--  §4  Auth helper functions  (is_owner, is_approved, auth_role, auth_status)
+--                              Deliberately after §5 -- see the note at that section.
 --  §6  Product code functions and triggers
 --  §7  Profile triggers and guards
 --  §8  Business settings trigger
@@ -113,51 +119,6 @@ begin
   return 'CLM-' || lpad(v_seq::text, 6, '0');
 end;
 $$;
-
-
--- =============================================================================
--- §4  AUTH HELPER FUNCTIONS
--- =============================================================================
-
-create or replace function public.auth_role()
-returns public.user_role
-language sql stable security definer
-set search_path = public, pg_temp
-as $$
-  select p.role from public.profiles p where p.id = auth.uid();
-$$;
-
-create or replace function public.auth_status()
-returns public.account_status
-language sql stable security definer
-set search_path = public, pg_temp
-as $$
-  select p.status from public.profiles p where p.id = auth.uid();
-$$;
-
-create or replace function public.is_owner()
-returns boolean
-language sql stable security definer
-set search_path = public, pg_temp
-as $$
-  select exists (
-    select 1 from public.profiles p
-    where p.id = auth.uid()
-      and p.role   = 'owner'
-      and p.status = 'approved'
-  );
-$$;
-
-create or replace function public.is_approved()
-returns boolean
-language sql stable security definer
-set search_path = public, pg_temp
-as $$
-  select true;
-$$;
-
-comment on function public.is_owner() is
-  'True only for an approved owner. A suspended owner loses all owner rights.';
 
 
 -- =============================================================================
@@ -431,6 +392,69 @@ create index if not exists warranty_claims_status_idx on public.warranty_claims 
 
 
 -- =============================================================================
+-- §4  AUTH HELPER FUNCTIONS
+-- =============================================================================
+-- Runs after the core tables on purpose. These four are `language sql`, and
+-- PostgreSQL parses and validates a SQL-language body at CREATE time rather
+-- than on first call, so creating them before public.profiles exists fails
+-- outright with:
+--
+--   ERROR:  relation "public.profiles" does not exist
+--
+-- which is why this script would not run on a fresh database while they sat
+-- in §4's original position. Nothing in §5 calls them, so the order is free.
+
+create or replace function public.auth_role()
+returns public.user_role
+language sql stable security definer
+set search_path = public, pg_temp
+as $$
+  select p.role from public.profiles p where p.id = auth.uid();
+$$;
+
+create or replace function public.auth_status()
+returns public.account_status
+language sql stable security definer
+set search_path = public, pg_temp
+as $$
+  select p.status from public.profiles p where p.id = auth.uid();
+$$;
+
+create or replace function public.is_owner()
+returns boolean
+language sql stable security definer
+set search_path = public, pg_temp
+as $$
+  select exists (
+    select 1 from public.profiles p
+    where p.id = auth.uid()
+      and p.role   = 'owner'
+      and p.status = 'approved'
+  );
+$$;
+
+create or replace function public.is_approved()
+returns boolean
+language sql stable security definer
+set search_path = public, pg_temp
+as $$
+  select exists (
+    select 1 from public.profiles p
+    where p.id = auth.uid()
+      and p.status = 'approved'
+  );
+$$;
+
+comment on function public.is_owner() is
+  'True only for an approved owner. A suspended owner loses all owner rights.';
+
+comment on function public.is_approved() is
+  'True only for a signed-in account whose status is approved. Returns false '
+  'for anonymous callers, so every policy that must still serve the public '
+  'catalogue spells that out as (auth.uid() is null or public.is_approved()).';
+
+
+-- =============================================================================
 -- §6  PRODUCT CODE FUNCTIONS AND TRIGGERS
 -- =============================================================================
 
@@ -499,6 +523,25 @@ create trigger set_product_code
 create or replace function public.freeze_product_code()
 returns trigger language plpgsql as $$
 begin
+  -- Codes stay editable until labels exist, because the owner product form
+  -- deliberately supports setting a custom code (see
+  -- SupabaseProductRepository.update). Once allocate_product_qr_labels has run
+  -- the code is on printed stickers and is a barcode that
+  -- lookup_product_by_barcode matches on in its fallback path, so from that
+  -- point a change makes the physical labels disagree with the row.
+  --
+  -- product_qr_labels keys on product_id, not product_code, so existing QR
+  -- scans keep resolving either way. It is the printed human-readable code and
+  -- the bare-code scan path that break.
+  if new.product_code is distinct from old.product_code
+     and exists (select 1 from public.product_qr_labels q
+                  where q.product_id = old.id)
+  then
+    raise exception
+      'product_code cannot change once QR labels are allocated (% -> %)',
+      old.product_code, new.product_code using errcode = '23514';
+  end if;
+
   new.updated_at := now();
   return new;
 end;
