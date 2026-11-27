@@ -56,3 +56,20 @@ coverage/
 # Test files & temporary media
 *.png
 test_rpc*.json
+
+# Signing material. Losing or leaking the upload key means a new app listing,
+# so it is kept out of the repository and backed up separately.
+*.jks
+*.keystore
+key.properties
+
+# Build configuration: not secret, but each file names one specific Supabase
+# project. See config/README.md.
+config/dev.json
+config/prod.json
+
+# Generated test logins for the dev Supabase project. Local only.
+config/dev_test_accounts.md
+
+# Generated owner login for the production Supabase project. Local only.
+config/owner_login.md

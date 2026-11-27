@@ -28,13 +28,45 @@ flutter {
 
 android {
     namespace = "com.krishnaailinks.marutiwater"
-    // Pinned to 36 rather than taken from flutter.compileSdkVersion, which is
-    // 35 on Flutter 3.32. targetSdk cannot exceed compileSdk, and targetSdk is
-    // pinned to 36 below for the Play requirement.
+    // Pinned rather than taken from flutter.compileSdkVersion so that a
+    // Flutter upgrade cannot move it on its own. targetSdk cannot exceed
+    // compileSdk, and targetSdk is pinned to 36 below for the Play
+    // requirement.
     compileSdk = 36
-    // Pinned to the highest version required by the bundled plugins; NDK
-    // versions are backward compatible.
-    ndkVersion = "27.0.12077973"
+    // ndkVersion is deliberately not pinned. AGP resolves its own default NDK
+    // (28.2.13676358 for AGP 9.3.1) and fails configuration if that exact
+    // version is missing, so pinning a different one only adds a second NDK to
+    // install:
+    //
+    //   Android sdkmanager did not install NDK 27.0.12077973
+    //
+    // Nothing here compiles native code; the NDK is reached only to strip
+    // symbols from the prebuilt .so files the engine and plugins ship.
+
+    lint {
+        // lintVital runs on every release build and analyses the plugin
+        // modules as well as this one. On a machine this size it is the
+        // largest single consumer in the build and falls over before it
+        // reports anything:
+        //
+        //   java.io.FileNotFoundException: ...\CompressError.kt
+        //   (Insufficient system resources exist to complete the requested
+        //   service)
+        //
+        // Nothing it checks gates shipping a Flutter app, and `flutter
+        // analyze` already covers the Dart side. Run `gradlew :app:lint` by
+        // hand when the Android layer changes.
+        checkReleaseBuilds = false
+    }
+
+    buildFeatures {
+        // AGP 9 turns resValues off by default. Both flavours declare
+        // app_name through resValue and the manifest reads it as
+        // @string/app_name, so without this the build fails at configuration
+        // with "Product Flavor dev contains custom resource values, but the
+        // feature is disabled."
+        resValues = true
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -42,20 +74,13 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
-
     defaultConfig {
         applicationId = "com.krishnaailinks.marutiwater"
         minSdk = flutter.minSdkVersion
-        // Pinned rather than taken from flutter.targetSdkVersion, which is 35
-        // on Flutter 3.32. From 31 August 2026 Google Play requires API 36 for
-        // every new app and every update, so a build left on the toolchain
-        // default would be rejected at upload with no local signal at all.
-        // Verified against developer.android.com/google/play/requirements/
-        // target-sdk on 30 August 2026. An extension to 1 November 2026 can be
-        // requested, but there is nothing here that needs one.
+        // Pinned rather than taken from flutter.targetSdkVersion. Google Play
+        // requires API 36 for every new app and every update, so a build left
+        // on whatever the toolchain happens to default to would be rejected at
+        // upload with no local signal at all.
         targetSdk = 36
         versionCode = flutter.versionCode
         // The build number, not just the semantic version. Flutter drops the
@@ -117,6 +142,14 @@ android {
                 "proguard-rules.pro",
             )
         }
+    }
+}
+
+// Replaces the android.kotlinOptions block, which Kotlin 2.4 deprecated to
+// error level: the build does not compile at all while it is present.
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
     }
 }
 

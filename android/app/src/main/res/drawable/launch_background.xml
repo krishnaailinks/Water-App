@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Window background shown while the process starts, before API 31. The
+     Android 12+ path does not use this file; see values-v31/styles.xml. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <bitmap android:gravity="fill" android:src="@drawable/background"/>
-    </item>
-    <item>
-        <bitmap android:gravity="center" android:src="@drawable/splash"/>
-    </item>
+    <item android:drawable="@color/ic_launcher_background" />
+    <item
+        android:drawable="@drawable/splash_logo"
+        android:gravity="center"
+        android:width="144dp"
+        android:height="144dp" />
 </layer-list>

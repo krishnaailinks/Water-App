@@ -154,13 +154,17 @@ class _ProductCreatedSheetState extends ConsumerState<ProductCreatedSheet> {
       if (bytes == null) {
         return;
       }
-      await Share.shareXFiles(<XFile>[
-        XFile.fromData(
-          bytes,
-          name: '${widget.product.productCode}.pdf',
-          mimeType: 'application/pdf',
+      await SharePlus.instance.share(
+        ShareParams(
+          files: <XFile>[
+            XFile.fromData(
+              bytes,
+              name: '${widget.product.productCode}.pdf',
+              mimeType: 'application/pdf',
+            ),
+          ],
         ),
-      ]);
+      );
       await _persistPrintedState();
     } on Object catch (error, stackTrace) {
       AppLog.error('Sharing product labels failed', error, stackTrace);

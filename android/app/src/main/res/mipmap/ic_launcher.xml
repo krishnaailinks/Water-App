@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Legacy launcher icon for API 24-25, where <adaptive-icon> is not parsed and
+    mipmap-anydpi-v26/ic_launcher.xml is therefore never selected. Same mark,
+    drawn full-bleed with its own background instead of composited by the
+    launcher.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="@color/ic_launcher_background"
+        android:pathData="M0,0 H108 V108 H0 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,22 C54,22 78,51 78,67 A24,24 0 0,1 30,67 C30,51 54,22 54,22 Z" />
+    <path
+        android:fillColor="#99D4E8FF"
+        android:pathData="M44,61 A10,10 0 1,0 44,81 A15,15 0 0,1 44,61 Z" />
+</vector>

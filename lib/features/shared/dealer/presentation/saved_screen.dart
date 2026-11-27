@@ -136,10 +136,12 @@ class _SavedScreenState extends ConsumerState<SavedScreen> {
     final fileName = QuotationController.fileNameFor(ref.read(nowProvider)());
 
     try {
-      await Share.shareXFiles(
-        <XFile>[
-          XFile.fromData(bytes, name: fileName, mimeType: 'application/pdf'),
-        ],
+      await SharePlus.instance.share(
+        ShareParams(
+          files: <XFile>[
+            XFile.fromData(bytes, name: fileName, mimeType: 'application/pdf'),
+          ],
+        ),
       );
     } on Object catch (error, stackTrace) {
       AppLog.error('Sharing the quotation failed', error, stackTrace);

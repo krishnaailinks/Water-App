@@ -42,8 +42,11 @@ abstract final class AppConfig {
   /// out was whether the new build was even installed.
   ///
   /// Must match `version:` in pubspec.yaml. `test/app_version_test.dart`
-  /// fails if it drifts.
-  static const String appVersion = '0.1.0+3';
+  /// fails if it drifts -- which it had, sitting at 0.1.0+3 against a pubspec
+  /// reading 1.0.0+1, because that test was described here but never written.
+  /// Every Sentry release and dist was therefore filed under a version that
+  /// had not shipped for months.
+  static const String appVersion = '1.0.2';
 
   /// Minimum password length accepted at sign-up.
   static const int minPasswordLength = 8;

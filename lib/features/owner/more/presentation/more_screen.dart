@@ -68,13 +68,17 @@ class MoreScreen extends ConsumerWidget {
 
     final file = outcome.file!;
     try {
-      await Share.shareXFiles(<XFile>[
-        XFile.fromData(
-          file.bytes,
-          name: file.fileName,
-          mimeType: file.mimeType,
+      await SharePlus.instance.share(
+        ShareParams(
+          files: <XFile>[
+            XFile.fromData(
+              file.bytes,
+              name: file.fileName,
+              mimeType: file.mimeType,
+            ),
+          ],
         ),
-      ]);
+      );
     } on Object catch (error, stackTrace) {
       AppLog.error('Sharing an export failed', error, stackTrace);
       if (context.mounted) {
